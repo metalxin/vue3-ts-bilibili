@@ -1,11 +1,21 @@
 <template>
     <van-tabs v-model:active="active">
-  <van-tab title="标签 1" name="a">内容 1</van-tab>
-  <van-tab title="标签 2" name="b">内容 2</van-tab>
-  <van-tab title="标签 3" name="c">内容 3</van-tab>
-</van-tabs>
+        <van-tab title="标签 1" name="a"></van-tab>
+    
+    </van-tabs>
 </template>
 <script setup lang="ts">
-import {ref} from 'vue'
-const active =ref(0)
+import { ref } from 'vue'
+import axios from 'axios'
+
+const list=ref([])
+
+const active = ref(0)
+axios({
+    url: '/swiperList',
+    method: 'get'
+}).then(res=>{
+    console.log(res.data)
+    list.value=res.data
+})
 </script>

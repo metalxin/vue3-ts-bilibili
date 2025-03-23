@@ -5,6 +5,7 @@ import '@/assets/styles/base.less'
 import '@/assets/styles/iconfont.css'
 import { Tab, Tabs } from 'vant';
 import 'vant/lib/index.css';
+import '@/mock/index'
 const app=createApp(App)
 app
 .use(Tab)
