@@ -3,10 +3,10 @@ import App from './App.vue'
 import router from './router'
 import '@/assets/styles/base.less'
 import '@/assets/styles/iconfont.css'
-import { Tab, Tabs } from 'vant';
+import { Tab, Tabs ,Swipe, SwipeItem} from 'vant';
 import 'vant/lib/index.css';
 import '@/mock/index'
-import { Swipe, SwipeItem } from 'vant';
+
 const app=createApp(App)
 app 
 .use(Tab)
